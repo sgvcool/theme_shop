@@ -1,8 +1,6 @@
 <?php
 require_once("../../../wp-load.php");
 
-//var_dump($_POST);
-
 $orderby = 'meta_value_num';
 
 if( $_POST['exclude'] && !empty($_POST['exclude']) ){
@@ -27,11 +25,9 @@ if( !empty($field) ){
  */
 $args = array(
     'posts_per_page' => $numb,
-    //'offset'         => $offset,
     'post_type'      => 'products',
     'post__not_in'   => $exclude,
     'post_status'    =>'publish',
-    //'meta_key'       => $metaKey,
     'orderby'        => $orderby,
     'order'          => $order
 );
