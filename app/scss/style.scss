@@ -1,0 +1,78 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "media";
+
+.block-title{
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+}
+.product-list__container{
+    display: flex;
+    padding: 0;
+    justify-content: space-beetwen;
+    align-items: center;
+    flex-wrap: wrap;
+    .product-list__item{
+        display: block;
+        list-style: none;
+        max-width: 31%;
+        margin: 1%;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        .product-list-item__img-block{
+            img{
+                display: block;
+                position: relative;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+/* rating */
+.product-list-item__rating_block{
+    width: 125px;
+    height: 25px;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .label_rating {
+        float: left;
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: url(../img/rating.png) no-repeat 50% -25px;
+        cursor: pointer;
+
+        &.noactive{
+            background: url(../img/rating.png) no-repeat 50% 0;
+        }
+    }
+    
+}
+
+.show-more{
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 15px auto;
+    display: block;
+    width: 200px;
+    border: 1px solid #000;
+}
+
+/* Cортування */
+.product_sort__panel{
+    span{
+        display: inline-block;
+        padding: 5px 10px;
+        width: 30%;
+        cursor: pointer;
+    }
+}
